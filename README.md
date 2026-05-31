@@ -1,8 +1,8 @@
-#Local AI Gateway
+# Local AI Gateway
 
 Un gateway ligero en FastAPI para exponer modelos de IA locales (Ollama) como una API tipo cloud, permitiendo consumir inferencia desde cualquier dispositivo dentro de la red.
 
-##🚀 Por qué existe este proyecto
+## 🚀 Por qué existe este proyecto
 
 El uso de modelos de IA vía APIs cloud (OpenAI, Anthropic, etc.) está creciendo rápidamente en entornos empresariales, pero trae dos problemas cada vez más relevantes:
 
@@ -15,7 +15,7 @@ Este proyecto nace como una base práctica para ese enfoque:
 
 Un gateway simple que permite convertir un modelo local en un servicio tipo API consumible desde cualquier dispositivo en la red.
 
-##🧠 Qué es este proyecto
+## 🧠 Qué es este proyecto
 
 Este sistema es una capa intermedia entre:
 
@@ -34,14 +34,14 @@ Ollama API (local)
         ↓
 Modelo LLM (ej: gemma, llama, mistral)
 
-##⚙️ Características
+## ⚙️ Características
 ✔ API REST simple y extensible
 ✔ Compatible con cualquier modelo de Ollama
 ✔ Medición de latencia por request
 ✔ Preparado para red local (LAN)
 ✔ Fácil de extender a producción (auth, logs, rate limiting)
 
-##📦 Instalación
+## 📦 Instalación
 1. Clonar repo
 git clone https://github.com/tuusuario/local-ai-gateway.git
 cd local-ai-gateway
@@ -55,7 +55,7 @@ https://ollama.com
 Ejemplo de modelo:
 ollama run gemma4:e4b
 
-##▶️ Ejecución
+## ▶️ Ejecución
 Levantar el gateway:
 uvicorn main:app --host 0.0.0.0 --port 8000
 
@@ -84,7 +84,7 @@ Respuesta
   "latency_sec": 1.42
 }
 
-##🔧 Casos de uso
+## 🔧 Casos de uso
 🏢 Empresas que quieren IA interna sin exponer datos sensibles
 📱 Apps móviles conectadas a IA local
 🧪 Prototipos de asistentes privados
@@ -103,7 +103,7 @@ Este tipo de gateway es el primer paso hacia una arquitectura de IA:
 
 Private-first, cost-controlled AI infrastructure
 
-##🔒 Seguridad (recomendado)
+## 🔒 Seguridad (recomendado)
 Actualmente el proyecto es para red local.
 Para entornos productivos se recomienda agregar:
 
@@ -113,7 +113,7 @@ Logging centralizado
 HTTPS (reverse proxy con Nginx)
 Control de acceso por IP
 
-##🧩 Extensiones posibles
+## 🧩 Extensiones posibles
 Streaming de tokens (tipo ChatGPT)
 Soporte multi-modelo con routing automático
 Cache de respuestas frecuentes
@@ -121,7 +121,7 @@ Panel web de monitoreo
 Cola de requests con Redis
 OpenAI-compatible API layer
 
-##📌 Tecnologías
+## 📌 Tecnologías
 FastAPI
 Ollama
 Python 3.10+
